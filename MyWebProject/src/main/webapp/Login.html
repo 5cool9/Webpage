@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Login_vars.css">
+  <link rel="stylesheet" href="./Login_style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="frame-2">
+    <div class="background">
+      <div class="div">로그인</div>
+     <form action="Login_process.jsp" method="post">
+      <input type="text" name="userId" placeholder="아이디 입력" required class="rectangle-1">
+        <input type="password" name="password" placeholder="비밀번호 입력" required class="rectangle-2">
+      
+      <div class="rectangle-3"></div>
+      <button type="submit" class="div2">로그인하기</button>
+       </form>
+       
+      <div class="rectangle-4"></div>
+      <button class="div3">회원가입</button>
+    </div>
+    <div class="container">
+      <div class="background2">
+        <div class="header">
+          <div class="heading-1-link">
+          <a href="MainPage.html">
+            <img class="image" src="image0.png" />
+            </a>
+          </div>
+          <img class="frame-10" src="frame-100.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const frameButton = document.querySelector(".frame-10");
+    frameButton.addEventListener("click", function() {
+      window.location.href = "DropDown.html?from=Login";  // 'from' 쿼리 파라미터로 원래 페이지 정보를 전달
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+	  const signupButton = document.querySelector(".div3");
+	  signupButton.addEventListener("click", function() {
+	    window.location.href = "http://localhost:8080/MyWebProject/signup.jsp"; 
+	  });
+	});
+  
+  document.addEventListener("DOMContentLoaded", function() {
+	  const loginButton = document.querySelector(".div2");
+	  loginButton.addEventListener("click", function(event) {
+	    event.preventDefault();  // 기본 이동 방지
+	    document.querySelector("form").submit();  // 로그인 폼 제출
+	  });
+	});
+
+
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Drop_vars.css">
+  <link rel="stylesheet" href="./Drop_style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none; 
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="drop-down-menu-2">
+    <div class="container">
+      <div class="heading-2-looking-for-new-artists">카테고리</div>
+      <div class="heading-2-looking-for-new-artists2">검색 🔍</div>
+      <a href="Login.html" class="heading-2-looking-for-new-artists3">마이페이지</a>
+      <a href="Choose_page1.html" class="heading-2-looking-for-new-artists4">야구 ⚾️</a>
+      <a href="Choose_page2.html" class="heading-2-looking-for-new-artists5">아이돌 ✨</a>
+      <div class="background">
+        <div class="header">
+          <div class="heading-1-link">
+          <a href="MainPage.html">
+            <img class="image" src="image0.png" />
+            </a>
+          </div>
+          <div class="frame-7">
+            <img class="x" src="x0.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const closeButton = document.querySelector(".x");
+
+    if (!closeButton) {
+      alert("X 버튼을 찾을 수 없습니다.");
+      return;
+    }
+
+    // URL에서 'from' 쿼리 파라미터 값을 읽어오기
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromPage = urlParams.get('from');  // 예: 'choosepage'
+
+    if (fromPage) {
+      closeButton.addEventListener("click", function() {
+        // 'from' 페이지로 리디렉션
+        window.location.href = fromPage + ".html"; 
+      });
+    } else {
+      alert("from 페이지가 없습니다.");
+    }
+  });
+</script>
+
+  
+</body>
+</html>

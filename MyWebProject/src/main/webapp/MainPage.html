@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./mainpage_vars.css">
+  <link rel="stylesheet" href="./mainpage_style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="_1920-w-light">
+    <div class="frame-2">
+      <div class="background"></div>
+      <div class="container">
+        <div class="background2">
+          <div class="header">
+            <div class="heading-1-link">
+            <a href="MainPage.html">
+              <img class="image" src="image0.png" />
+              </a>
+            </div>
+            <img class="frame-10" src="frame-100.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-text-container">
+    <div class="line1">좋아하고, 사랑하자 </div>
+    <div class="line2">맛있는거 먹으면서 !</div>
+</div>
+  
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const frameButton = document.querySelector(".frame-10");
+    frameButton.addEventListener("click", function() {
+      window.location.href = "DropDown.html?from=MainPage";  // 'from' 쿼리 파라미터로 원래 페이지 정보를 전달
+    });
+  });
+</script>
+ 
+</body>
+</html>
