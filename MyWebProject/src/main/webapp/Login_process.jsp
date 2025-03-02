@@ -38,7 +38,7 @@
 %>
     <script>
         alert("로그인 성공!");
-        window.location.href = Choose_page1.html"; // 로그인 성공 시 이동할 페이지
+        window.location.href = "MainPage.html"; // 로그인 성공 시 이동할 페이지
     </script>
 <%
     } else {
